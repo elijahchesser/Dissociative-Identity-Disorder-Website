@@ -1,9 +1,12 @@
 :root{
     font-size: 20px;
+
+    --primaryColor: #a080e6;
+    --secondaryColor: #dcd4ea;
 }
 
 body{
-    background: linear-gradient(#a080e6, #dcd4ea);
+    background: linear-gradient(var(--primaryColor), var(--secondaryColor));
     height: 100dvh;
 }
 #navbar{
@@ -19,6 +22,10 @@ body{
     left:0px;
     text-shadow: 2px 2px rgba(255,255,255,0.5);
     border-bottom: 5px solid #b4b2d6;
+}
+
+main{
+    margin-top: 160px;
 }
 
 h1{
