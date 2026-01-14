@@ -53,7 +53,7 @@ table {
 
 body{
     height: 100dvh;
-/* Placeholder background for right now. */
+	/* Placeholder background for right now. */
     background: repeating-linear-gradient(45deg, crimson 10%, rgb(228, 40, 77) 50%);
     background-size: 2rem 2rem;
     backdrop-filter: brightness(0.67);
