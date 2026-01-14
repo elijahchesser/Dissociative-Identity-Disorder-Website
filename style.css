@@ -1,9 +1,12 @@
 :root{
     font-size: 20px;
+
+    --primaryColor: #a080e6;
+    --secondaryColor: #dcd4ea;
 }
 
 body{
-    background: linear-gradient(#a080e6, #dcd4ea);
+    background: linear-gradient(var(--primaryColor), var(--secondaryColor));
     height: 100dvh;
     padding-top:120px;
 }
