@@ -24,6 +24,10 @@ body{
     border-bottom: 5px solid #b4b2d6;
 }
 
+main{
+    margin-top: 160px;
+}
+
 h1{
     text-align: center;
     color: #e8dfff;
