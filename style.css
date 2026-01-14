@@ -14,6 +14,20 @@ body{
     background: linear-gradient(var(--primaryColor), var(--secondaryColor));
     height: 100dvh;
 }
+
+body::after{
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0);
+    z-index: 0;
+    pointer-events: none;
+    transition: background 0.3s ease-in-out;
+}
+
 #navbar{
     display:flex;
     justify-content:space-around;
@@ -26,6 +40,7 @@ body{
     top:0px;
     left:0px;
     border-bottom: 3.5px solid var(--secondaryColor);
+    z-index: 1;
 }
 
 #navbar h1{
@@ -47,4 +62,22 @@ h1{
 
 a{
     text-decoration: none;
+    z-index: 2929
+}
+
+a h1{
+    transition: color 0.3s ease;
+}
+
+#navbar a{
+    /* Ensures theres no unnecessary extra space */
+    display: contents;
+}
+
+#navbar a:hover h1{
+    color: #b59fe6;
+}
+
+body:has(#navbar a:hover)::after{
+    background: rgba(0,0,0,0.25);
 }
