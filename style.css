@@ -8,11 +8,10 @@
 body{
     background: linear-gradient(var(--primaryColor), var(--secondaryColor));
     height: 100dvh;
-    padding-top:120px;
 }
 #navbar{
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
     align-items:center;
     background:#9291b3;
     text-align:center;
