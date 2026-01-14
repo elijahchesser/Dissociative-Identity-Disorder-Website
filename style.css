@@ -8,7 +8,7 @@ body{
 }
 #navbar{
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
     align-items:center;
     background:#9291b3;
     text-align:center;
