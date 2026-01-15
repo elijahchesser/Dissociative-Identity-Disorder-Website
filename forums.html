@@ -9,17 +9,20 @@
         #forumsContainer {
             width: 80%;
             margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             background: var(--secondaryColor);
             border-radius: 20px;
             border: 0.15rem solid var(--darkPurple);
         }
         .forumItem {
+            width: 100%;
             padding: 10px;
             flex: 1 0 300px;
-            text-align: center;
+            text-align: left;
+        }
+
+        .forumItem > * {
+            display: inline;
+            color: var(--darkerPurple);
         }
     </style>
 </head>
@@ -36,10 +39,12 @@
         <h1>Forums</h1>
         <div id="forumsContainer">
             <div class="forumItem">
-                <h2>Discussion Forums</h2>
+                <h2>EvilKiwi:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus magnam porro maxime quia! Libero placeat reiciendis quia commodi sed quibusdam blanditiis, recusandae porro voluptatem magnam adipisci officiis illo sequi odit.</p>
             </div>
             <div class="forumItem">
-                <h2>Discussion Forums</h2>
+                <h2>EvilKiwi:</h2>
+                <p>I am the.</p>
             </div>
         </div>
     </main>
