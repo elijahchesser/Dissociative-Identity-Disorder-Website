@@ -6,7 +6,21 @@
     <title>Forums</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <style>
-
+        #forumsContainer {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background: var(--secondaryColor);
+            border-radius: 20px;
+            border: 0.15rem solid var(--darkPurple);
+        }
+        .forumItem {
+            padding: 10px;
+            flex: 1 0 300px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -20,6 +34,14 @@
     </navbar>
     <main>
         <h1>Forums</h1>
+        <div id="forumsContainer">
+            <div class="forumItem">
+                <h2>Discussion Forums</h2>
+            </div>
+            <div class="forumItem">
+                <h2>Discussion Forums</h2>
+            </div>
+        </div>
     </main>
 </body>
 </html>
