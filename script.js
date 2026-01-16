@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const writePostButton = document.getElementById('writePostButton');
 
     submitButton.addEventListener('click', function() {
-        user = document.getElementById('newPostUser').value.trim();
-        text = document.getElementById('newPostText').value.trim();
-        // if (user === '' || text === '') {
-        //     alert('Please fill in both fields.');
-        //     return;
-        // }
+        user = document.getElementById('newPostUser').value;
+        text = document.getElementById('newPostText').value;
+        if (user === '' || text === '') {
+            alert('Please fill in both fields.');
+            return;
+        }
 
         const item = document.createElement('div');
         item.className = 'forumItem';
@@ -30,6 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     writePostButton.addEventListener('click', function() {
         const newPostContainer = document.getElementById('newPostContainer');
-        newPostContainer.style.display = newPostContainer.style.display === 'none' ? 'block' : 'none';
+        newPostContainer.style.display = newPostContainer.style.display === 'block' ? 'none' : 'block';
     });
 });
