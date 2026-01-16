@@ -48,6 +48,7 @@ body::after{
     color: var(--secondaryColor);
     text-shadow: var(--darkTextShadow);
     font-size: clamp(1.5rem, 5vw, 4rem);
+    font-weight: bold;
 }
 
 main{
