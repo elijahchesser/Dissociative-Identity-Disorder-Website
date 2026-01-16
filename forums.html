@@ -5,21 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forums</title>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="script.js"></script>
     <style>
         #forumsContainer {
             width: 80%;
             margin: auto;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            background: var(--secondaryColor);
+            background: rgb(229, 210, 255);
             border-radius: 20px;
             border: 0.15rem solid var(--darkPurple);
         }
         .forumItem {
+            width: 100%;
             padding: 10px;
-            flex: 1 0 300px;
+            text-align: left;
+        }
+
+        .forumItem > * {
+            display: inline;
+            color: var(--darkerPurple);
+        }
+
+        #newPostContainer {
+            padding: 10px;
+            color: var(--darkerPurple);
+            backdrop-filter: brightness(0.95) saturate(1.2);
             text-align: center;
+            border-top: 0.15rem solid var(--darkPurple);
+        }
+
+        #inputContainer{
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        input{
+            height: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        input, textarea{
+            color: var(--darkerPurple);
+            border: 2px solid var(--darkPurple);
+            border-radius: 10px;
+            transition: all 0.15s ease-in-out;
+        }
+
+        textarea{
+            resize: none;
+            width: 80%;
+            height: 3rem;
+        }
+
+        textarea:focus-visible, input:focus-visible {
+            outline: none;
+            background: #f8edff;
+            box-shadow: 0 0 5px var(--primaryColor);
         }
     </style>
 </head>
@@ -36,10 +76,20 @@
         <h1>Forums</h1>
         <div id="forumsContainer">
             <div class="forumItem">
-                <h2>Discussion Forums</h2>
+                <h2>EvilKiwi:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus magnam porro maxime quia! Libero placeat reiciendis quia commodi sed quibusdam blanditiis, recusandae porro voluptatem magnam adipisci officiis illo sequi odit.</p>
             </div>
             <div class="forumItem">
-                <h2>Discussion Forums</h2>
+                <h2>EvilKiwi:</h2>
+                <p>I am the.</p>
+            </div>
+            <div id="newPostContainer">
+                <h2>New Post:</h2>
+                <div id="inputContainer">
+                    <input type="text" id="newPostUser" placeholder="Your name...">
+                    <textarea id="newPostText" placeholder="Write your post here..."></textarea>
+                </div>
+                <button id="submitButton">Submit</button>
             </div>
         </div>
     </main>
