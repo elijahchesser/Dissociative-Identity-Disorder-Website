@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const forumItemsContainer = document.getElementById('forumItemsContainer');
     const submitButton = document.getElementById('submitButton');
+    const writePostButton = document.getElementById('writePostButton');
 
     submitButton.addEventListener('click', function() {
         user = document.getElementById('newPostUser').value.trim();
@@ -25,5 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
         newPostUser.value = '';
         newPostText.value = '';
+    });
+
+    writePostButton.addEventListener('click', function() {
+        const newPostContainer = document.getElementById('newPostContainer');
+        newPostContainer.style.display = newPostContainer.style.display === 'none' ? 'block' : 'none';
     });
 });

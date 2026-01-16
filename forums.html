@@ -32,6 +32,7 @@
             text-align: center;
             border-top: 0.15rem solid var(--darkPurple);
             padding-bottom: 3rem;
+            border-radius: 10px;
         }
 
         #inputContainer{
@@ -76,6 +77,8 @@
             height: 1.75rem;
             cursor: pointer;
             transition: all 0.15s ease-in-out;
+            font-weight: bold;
+
         }
 
         button:hover, button:focus-visible {
@@ -84,6 +87,10 @@
             filter: brightness(1.1);
             outline: none;
             transform: scale(1.05, 1);
+        }
+
+        #writePostButton{
+            margin: 1rem;
         }
     </style>
 </head>
@@ -102,15 +109,23 @@
         <h1>Forums</h1>
         <div id="forumsContainer">
             <div id="forumItemsContainer">
-
+                <div class="forumItem">
+                    <h2>EvilKiwi: </h2>
+                    <p>Le Evik</p>
+                </div>
+                <div class="forumItem">
+                    <h2>OurpleArob: </h2>
+                    <p>Ourple</p>
+                </div>
             </div>
+            <button id="writePostButton">Write a Post:</button>
             <div id="newPostContainer">
                 <h2>New Post:</h2>
                 <div id="inputContainer">
                     <input type="text" id="newPostUser" placeholder="Your name..." maxlength="32"/>
                     <textarea id="newPostText" placeholder="Write your post here..." maxlength="1024"></textarea>
                 </div>
-                <button id="submitButton">Submit</button>
+                <button id="submitButton">Post</button>
             </div>
         </div>
     </main>
