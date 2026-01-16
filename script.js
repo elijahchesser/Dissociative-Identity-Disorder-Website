@@ -38,35 +38,22 @@ document.addEventListener('DOMContentLoaded', function() {
     let hPressed = false;
 
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'd') {
+        if (event.key === 'd' || event.key === 'D') {
             dPressed = true;
         }
-        if (event.key === 'i') {
+        if (event.key === 'i' || event.key === 'I') {
             iPressed = true;
         }
-        if (event.key === 'h') {
+        if (event.key === 'h' || event.key === 'H') {
             hPressed = true;
         }
-    });
 
-    document.addEventListener('keyup', function(event) {
-        if (event.key === 'd') {
-            dPressed = false;
-        }
-        if (event.key === 'i') {
-            iPressed = false;
-        }
-        if (event.key === 'h') {
-            hPressed = false;
+        if (dPressed && iPressed && hPressed) {
+            console.log(dPressed)
+            const div = document.createElement('div');
+            div.style.fontSize = '3rem';
+            div.textContent = 'DIH Mode Activated';
+            document.body.appendChild(div);
         }
     });
-    if (dPressed) {
-        console.log('d pressed');
-    }
-
-    if (dPressed && iPressed && hPressed) {
-        const div = document.createElement('div');
-        div.textContent = 'DIH Mode Activated';
-        document.body.appendChild(div);
-    }
 });
