@@ -47,6 +47,7 @@ body::after{
 #navbar h1{
     color: var(--secondaryColor);
     text-shadow: var(--darkTextShadow);
+    font-size: clamp(1.5rem, 5vw, 4rem);
 }
 
 main{
