@@ -13,30 +13,12 @@
             justify-content:space-around;
             width:100%;
         }
-        #textSources{
+        .source{
             display:flex;
             flex-direction:column;
             width:33.33%;
         }
-        #subTextSources{
-            display:flex;
-            justify-content: center;
-            margin:auto;
-            background-color: var(--secondaryColor);
-            width:100%;
-            border-radius:30px;
-            border-color:var(--primaryColor);
-            border-width:5px;
-            border-style: solid;
-            font-size:250%;
-            line-height: 200%;
-        }
-        #imgSources{
-            display:flex;
-            flex-direction:column;
-            width:33.33%;
-        }
-        #subImgSources{
+        .subSource{
             display:flex;
             justify-content: center;
             margin:auto;
@@ -61,9 +43,9 @@
         </navbar>
     <main>
         <div id=sources>
-            <div id="textSources">
+            <div class="source">
                 <h1 style="margin-bottom:3%;">Information</h1>
-                <div id="subTextSources">
+                <div class="subSource">
                     <ul>
                         <li>
                             thing 1
@@ -86,9 +68,9 @@
                     </ul>
                 </div>
             </div>
-            <div id="imgSources">
+            <div class="source">
                 <h1 style="margin-bottom:3%;">Images</h1>
-                <div id="subImgSources">
+                <div class="subSource">
                     <ul>
                         <li>
                             thing 1
