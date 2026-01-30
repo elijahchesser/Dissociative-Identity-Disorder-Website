@@ -9,87 +9,157 @@
         <link rel="stylesheet" href="style.css" type="text/css"/> 
         <link rel="stylesheet" href="reset.css" type="text/css"/>
         <style>
+            #wrapper{
+                min-height: 100dvh;
+                display: flex;
+                flex-direction: column;
+            }
+            main{
+                flex: 1;
+            }
             #overview{
-                display:flex;
-                align-items:center;                
-                padding-top: 120px;
+                display:flex;              
                 width: 100%;
-                height: 75.5vh;
-                border-bottom:5px 
+                height: clamp(70vh, 90vh, 800px);
             }
             #article{
                 padding:10px;
                 width:45%;
+                min-width: 25%;
                 height: 80%;
                 background-color: var(--darkPurple);
                 color:var(--darkerPurple);
                 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: 23px;
+                font-size: clamp(0.65rem, 2vw, 1.25rem);
                 margin-left:1.75%;
                 overflow:auto;
-                border-bottom: 6px solid var(--darkerPurple);
-                border-right: 6px solid var(--darkerPurple);
-                border-left: 6px solid var(--primaryColor);
-                border-top: 6px solid var(--primaryColor);
+                max-height: 800px;
+                border: 6px ridge var(--darkPurple);
+                border-right: 6px groove var(--darkPurple);
+                border-bottom: 6px groove var(--darkPurple);
             }
+            #imgContainer{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                width:80%;
+                height: 80%;
+                margin: 0 1rem;
+                max-height: 800px;
+                max-width: 800px;
+            }
+
             .imgheader{
                 display:flex;
-                flex-direction:column;
+                flex-direction: column;
                 align-items: center;
+                width: clamp(20%, 500vw, 90%);
+                aspect-ratio: 9 / 9;
+                max-height: 600px;
+                max-width: 600px;
+            }
+            .imgheader img {
+                border: 6px ridge var(--primaryColor);
+                border-right: 6px groove var(--primaryColor);
+                border-bottom: 6px groove var(--primaryColor);
+                border-radius: 10px;
             }
             h1{
                 color: var(--darkerPurple);
                 font-size:100px;
+                font-family: Calibri, 'Trebuchet MS';
             }
-            a{
-                text-decoration: none;
+            .imgheader a{
+                margin-top: 0.1rem;
+                text-decoration: underline;
+                font-size: clamp(0.8rem, 2vw, 1.25rem);
+                color: var(--darkPurple);
+                transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            }
+            .imgheader a:hover{
+                color: var(--darkerPurple);
+                transform: scale(1.025);
+            }
+            .imgheader a:active{
+                color: #7c1680;
+                transform: scale(1.04);
             }
             footer{
                 display:flex;
                 flex-direction: column;
                 align-items:center;
-                justify-content:center;
-                font-size: 30px;
-                height:130px;
+                font-size: clamp(0.8rem, 2vw, 1.25rem);
+                height: fit-content;
                 color: var(--secondaryColor);
-                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                 text-shadow: var(--darkTextShadow);
                 background-color:var(--darkPurple);
                 border-top: 3.5px solid var(--darkerPurple);
+                width: calc(100% - 0.4rem);
+                padding: 0.2rem;
+                padding-bottom: 0.4rem;
+                margin-top: auto;
+            }
+
+            footer a{
+                text-decoration: underline;
+                color: var(--secondaryColor);
+                transition: color 0.3s ease-in-out;
+            }
+            footer a:hover{
+                color: #d0bdf1;
+            }
+            footer a:active{
+                color: #b899d1;
             }
         </style>
     </head>
     <body>
-        <navbar>
-            <div id="navbar">
-                <a href="details.html" target="blank_"><h1>DETAILS</h1></a>
-                <a href="forums.html" target="blank_"><h1>FORUMS</h1></a>
-                <a href="blogs.html" target="blank_"><h1>BLOG</h1></a>
-            </div>
-        </navbar>
-        <div id="overview">
-            <div id="article">
-                <p style="color:var(--secondaryColor);">
-                    &nbsp;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-                    <br/><br/> &nbsp;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-                    <br/><br/> &nbsp;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-                    <br/><br/> &nbsp;Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
-                </p>
-            </div>
-            <div class="imgheader">
-                <h1>What is D.I.D?</h1>
-                <figure class="imgheader">
-                    <img src="img/DID_Treatment_Integration_Fusion.jpg" alt="DID Treatment Integration Fusion Chart" height="70%" width="70%" style="margin-top:30px;"/>
-                    <figcaption style="text-align:center;">Trauma Dissociation logo. Dissociative Identity Disorder, Traumadissociation.com, n.d., https://traumadissociation.com/dissociativeidentitydisorder </figcaption>
-                </figure>
-            </div>
+        <div id="wrapper">
+            <navbar>
+                <div id="navbar">
+                    <a href="worksCited.html" target="blank_"><h1>CITES</h1></a>
+                    <a href="forums.html" target="blank_"><h1>FORUMS</h1></a>
+                    <a href="blogs.html" target="blank_"><h1>BLOG</h1></a>
+                </div>
+            </navbar>
+            <main>
+                <div id="overview">
+                    <div id="article">
+                        <p style="color:var(--secondaryColor);">
+                           &nbsp; Imagine losing time of your life, or living your life with random missing pieces. People with dissociative identity disorder live in this reality. They don’t actually lose time, but a different part of their mind takes control. DID or Dissociative Identity disorder is a mental condition that affects a patient with multiple personalities, causes physical harm to others or oneself, and also inflicts memory loss. Though the condition does not affect many, it is still a very serious problem. 
+                        </p><br/>
+                        <p style="color:var(--secondaryColor);">
+                            &nbsp; Patients who have dissociative identity disorder is a condition where one has multiple personalities. This leads to mood, body language, demeanor, tone, and even thoughts switching! This may seem harmless at first, but this is actually very serious due to the patient having very unpredictable actions. Imagine one second you are talking to someone and then they suddenly don’t know you or even become aggressive towards you! For this reason DID is a very serious manner to discuss. 
+                        </p><br/>
+                        <p style="color:var(--secondaryColor);">
+                            &nbsp; People with DID have an elevated chance of self-inflicted harm. According to the National Library of Medicine “They are also at an elevated risk of self-harm, repeated suicide attempts, and mortality, making them among the most costly patients to treat within the healthcare system. These clinical features and the high-risk profile underscore the urgent need for developing effective treatment models.” (Bachrach and Huntjens) This quote provides information showing that DID patients usually are at a high risk. Sites like Psychology Today will also explain “Most with DID are more at risk to themselves should one of their parts engage in self-injurious behavior such as cutting, burning, and/or substance abuse to cope with the emotional and physical pain that, for most with DID, is the result of unresolved trauma.” (Fletcher)
+                        </p><br/>
+                        <p style="color:var(--secondaryColor);">
+                            &nbsp; DID also has a very common symptom of memory loss. Patients that have DID usually experience memory loss when it comes to switching between personalities. Nature.com explains that “Dissociative identity disorder (DID) offers a unique within-subject “natural experiment” for examining this question. Characterized by two or more distinct, enduring personality states that sequentially govern behavior, often accompanied by memory gaps beyond ordinary forgetfulness.” (Alotaibi, Turkiah, Norah Almusharraf, and Muhammad). DID patients experience great levels of memory loss that exceeds normal manners. This leads to a very horrible style of life where the patient will constantly experience switching between different personalities and constant forgetfulness.
+                        </p>
+                    </div>
+                    <div id="imgContainer">
+                        <h1>What is D.I.D?</h1>
+                        <figure class="imgheader">
+                            <img src="img/DID_Treatment_Integration_Fusion.jpg" alt="DID Treatment Integration Fusion Chart" height="70%" width="70%" style="margin-top:30px;"/>
+                            <a href="https://traumadissociation.com/dissociativeidentitydisorder" target="blank_">
+                                <figcaption style="text-align:center;">
+                                    Trauma Dissociation logo. Dissociative Identity Disorder, 
+                                    Traumadissociation.com, n.d., 
+                                    https://traumadissociation.com/dissociativeidentitydisorder 
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <p>Made by Aaron Houston, Duncan Bruton, Elijah Chesser, Isaiah Gully, at the Canadian Valley Technology Center (6505 E Hwy 66, El Reno, OK 73036)</p>
+                <p>Last Updated January 21st, 2026</p>
+                <nav>
+                    <a href="worksCited.html" target="blank_"><p>Click Here For Works Cited</p></a>
+                </nav>
+            </footer>
         </div>
-        <footer>
-            <p>Made by Aaron Houston, Duncan Bruton, Elija Chesser, Isaiah Gully, at the Canadian Valley Technology Center (6505 E Hwy 66, El Reno, OK 73036)</p>
-            <p>last Updated January 16th 2026</p>
-            <nav>
-            <a href="worksCited.html" target="blank_" style="text-decoration: none; color:var(--secondaryColor);"><p>Click Here For Works Cited</p></a>
-            </nav>
-        </footer>
     </body>
 </html>

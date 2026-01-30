@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     submitButton.addEventListener('click', function() {
         user = document.getElementById('newPostUser').value;
         text = document.getElementById('newPostText').value;
-        if (user === '' || text === '') {
+        if (user.trim() === '' || text.trim() === '') {
             alert('Please fill in both fields.');
             return;
         }
@@ -31,29 +31,5 @@ document.addEventListener('DOMContentLoaded', function() {
     writePostButton.addEventListener('click', function() {
         const newPostContainer = document.getElementById('newPostContainer');
         newPostContainer.style.display = newPostContainer.style.display === 'block' ? 'none' : 'block';
-    });
-
-    let dPressed = false;
-    let iPressed = false;
-    let hPressed = false;
-
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'd' || event.key === 'D') {
-            dPressed = true;
-        }
-        if (event.key === 'i' || event.key === 'I') {
-            iPressed = true;
-        }
-        if (event.key === 'h' || event.key === 'H') {
-            hPressed = true;
-        }
-
-        if (dPressed && iPressed && hPressed) {
-            console.log(dPressed)
-            const div = document.createElement('div');
-            div.style.fontSize = '3rem';
-            div.textContent = 'DIH Mode Activated';
-            document.body.appendChild(div);
-        }
     });
 });
